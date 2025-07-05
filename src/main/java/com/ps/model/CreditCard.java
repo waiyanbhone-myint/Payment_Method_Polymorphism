@@ -1,4 +1,4 @@
-package com.ps;
+package com.ps.model;
 
 public class CreditCard extends Payment{
     private String cardNumber;

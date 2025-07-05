@@ -1,6 +1,6 @@
-package com.ps;
+package com.ps.model;
 
-abstract class Payment {
+public abstract class Payment {
 
     private String paymentId;
     private double amount;
