@@ -1,5 +1,7 @@
 package com.ps.model;
 
+import com.ps.model.enums.PaymentMethodType;
+
 public class CreditCard extends Payment{
     private String cardNumber;
     private String expirationDate;
@@ -32,7 +34,7 @@ public class CreditCard extends Payment{
     }
 
     @Override
-    public String getPaymentMethod() {
-        return "Credit Card";
+    public PaymentMethodType getPaymentMethod() {
+        return PaymentMethodType.CREDIT_CARD;
     }
 }

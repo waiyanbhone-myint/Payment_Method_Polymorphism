@@ -1,5 +1,8 @@
 package com.ps.model;
 
+import com.ps.model.enums.PaymentMethodType;
+import com.ps.model.enums.PaymentStatus;
+
 public class BankTransfer extends  Payment{
     private String accountNumber;
     private String routingNumber;
@@ -18,9 +21,9 @@ public class BankTransfer extends  Payment{
             return false;
         };
 
-        System.out.println("Contacting to your Bank");
-        System.out.println("Bank Transfer Payment Processing");
-        System.out.println("Bank Transfer Authorized");
+        System.out.println(PaymentStatus.PENDING);
+        System.out.println(PaymentStatus.PROCESSING);
+        System.out.println(PaymentStatus.AUTHORIZED);
         return true;
     }
 
@@ -30,7 +33,7 @@ public class BankTransfer extends  Payment{
     }
 
     @Override
-    public String getPaymentMethod() {
-        return "Bank Transfer";
+    public PaymentMethodType getPaymentMethod() {
+        return PaymentMethodType.BANK_TRANSFER;
     }
 }

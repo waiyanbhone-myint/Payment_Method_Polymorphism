@@ -1,10 +1,14 @@
 package com.ps.model;
 
+import com.ps.model.enums.PaymentMethodType;
+import com.ps.model.enums.PaymentStatus;
+
 public abstract class Payment {
 
     private String paymentId;
     private double amount;
     private String customerName;
+    private PaymentStatus status = PaymentStatus.PENDING;
 
     public Payment(String paymentId, double amount, String customerName) {
         this.paymentId = paymentId;
@@ -14,7 +18,8 @@ public abstract class Payment {
 
     public abstract boolean processPayment();
     public abstract double calculateProcessingFee();
-    public abstract String getPaymentMethod();
+    public abstract PaymentMethodType getPaymentMethod();
+
 
     public void displayPaymentInfo(){
         System.out.println("=====Payment Information=====");

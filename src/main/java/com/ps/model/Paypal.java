@@ -1,5 +1,7 @@
 package com.ps.model;
 
+import com.ps.model.enums.PaymentMethodType;
+
 public class Paypal extends Payment {
 
     private String email;
@@ -48,7 +50,7 @@ public class Paypal extends Payment {
     }
 
     @Override
-    public String getPaymentMethod() {
-        return "Paypal";
+    public PaymentMethodType getPaymentMethod() {
+        return PaymentMethodType.PAYPAL;
     }
 }

@@ -2,6 +2,7 @@ package com.ps.model.processor;
 
 import com.ps.Interfaces.PaymentProcessor;
 import com.ps.model.Payment;
+import com.ps.model.enums.PaymentMethodType;
 //import com.ps.model.Payment;
 
 public class OnlinePaymentProcessor implements PaymentProcessor {
@@ -32,7 +33,7 @@ public class OnlinePaymentProcessor implements PaymentProcessor {
             return false;
         }
 
-        String paymentMethod = payment.getPaymentMethod();
+        PaymentMethodType paymentMethod = payment.getPaymentMethod();
 
         if(paymentMethod.equals("Credit Card")){
             System.out.println("Credit Card validation: Checking with Bank");

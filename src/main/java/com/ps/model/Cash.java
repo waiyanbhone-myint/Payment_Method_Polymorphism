@@ -1,5 +1,7 @@
 package com.ps.model;
 
+import com.ps.model.enums.PaymentMethodType;
+
 public class Cash extends Payment{
 
     private String cashierId;
@@ -41,8 +43,8 @@ public class Cash extends Payment{
     }
 
     @Override
-    public String getPaymentMethod() {
-        return "Cash Payment";
+    public PaymentMethodType getPaymentMethod() {
+        return PaymentMethodType.CASH;
     }
 
     public String getCashierId() {
