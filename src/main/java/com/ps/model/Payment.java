@@ -8,7 +8,7 @@ public abstract class Payment {
     private String paymentId;
     private double amount;
     private String customerName;
-    private PaymentStatus status = PaymentStatus.PENDING;
+    //private PaymentStatus status = PaymentStatus.PENDING;
 
     public Payment(String paymentId, double amount, String customerName) {
         this.paymentId = paymentId;
